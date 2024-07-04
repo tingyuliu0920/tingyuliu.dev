@@ -1,4 +1,4 @@
-import { Box, Modal } from "@mui/material";
+import { Modal } from "@mui/material";
 
 interface ImageModalProps {
   imgSrc: string;

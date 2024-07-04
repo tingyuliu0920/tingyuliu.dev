@@ -17,50 +17,59 @@ const Experience = () => {
       <h3 className="mb-3 text-3xl font-bold leading-loose text-green dark:text-gray-300">
         Experience
       </h3>
-      <Timeline
-        sx={{
-          [`& .${timelineOppositeContentClasses.root}`]: {
-            flex: 0.3,
-          },
-        }}
-      >
-        {experienceList.map((experience) => (
-          <TimelineItem key={experience.company}>
-            <TimelineOppositeContent
-              sx={{ m: "auto 0" }}
-              align="right"
-              variant="body2"
-            >
-              <p className="text-base text-gray-700 dark:text-gray-400">
-                {experience.time}
-              </p>
-            </TimelineOppositeContent>
-            <TimelineSeparator>
-              <TimelineConnector />
-              <TimelineDot></TimelineDot>
-              <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent sx={{ py: "20px", px: 2 }}>
-              <section className="text-center">
-                <p className="font-bold sm:text-xl">{experience.company}</p>
-                <h6 className="mb-[10px] sm:text-xl">{experience.position}</h6>
-                {experience.logo && (
-                  <img
-                    src={experience.logo}
-                    alt=""
-                    className="mb-[10px] inline-block w-[100px] sm:w-[150px]"
-                  />
-                )}
-                <ul className="text-left">
-                  {experience.responsibilities.map((responsibility, index) => (
-                    <li key={index}>- {responsibility}</li>
-                  ))}
-                </ul>
-              </section>
-            </TimelineContent>
-          </TimelineItem>
-        ))}
-      </Timeline>
+      <div className="flex justify-center">
+        <Timeline
+          sx={{
+            maxWidth: "620px",
+            [`& .${timelineOppositeContentClasses.root}`]: {
+              width: "110px",
+              flex: "none",
+            },
+          }}
+        >
+          {experienceList.map((experience) => (
+            <TimelineItem key={experience.company}>
+              <TimelineOppositeContent
+                sx={{ m: "auto 0" }}
+                align="right"
+                variant="body2"
+              >
+                <div className="flex flex-col text-base text-gray-700 dark:text-gray-400">
+                  <span>{experience.endTime} </span>-{" "}
+                  <span>{experience.startTime}</span>
+                </div>
+              </TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineConnector />
+                <TimelineDot></TimelineDot>
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent sx={{ py: "20px", px: 2 }}>
+                <section className="text-center">
+                  <p className="font-bold sm:text-xl">{experience.company}</p>
+                  <h6 className="mb-[10px] sm:text-xl">
+                    {experience.position}
+                  </h6>
+                  {experience.logo && (
+                    <img
+                      src={experience.logo}
+                      alt=""
+                      className="mb-[10px] inline-block w-[100px] sm:w-[150px]"
+                    />
+                  )}
+                  <ul className="text-left">
+                    {experience.responsibilities.map(
+                      (responsibility, index) => (
+                        <li key={index}>- {responsibility}</li>
+                      ),
+                    )}
+                  </ul>
+                </section>
+              </TimelineContent>
+            </TimelineItem>
+          ))}
+        </Timeline>
+      </div>
     </div>
   );
 };

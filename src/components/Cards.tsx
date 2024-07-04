@@ -4,6 +4,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import { useState } from "react";
+import { useTheme } from "./ThemeContext";
 
 interface Movie {
   name: string;
@@ -14,6 +15,7 @@ interface CardsProps {
   movies: Movie[];
 }
 const Cards = ({ movies }: CardsProps) => {
+  const { darkMode } = useTheme();
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleCardClick = () => {
@@ -28,6 +30,7 @@ const Cards = ({ movies }: CardsProps) => {
             index === activeIndex ? "rotate-0" : "rotate-5"
           } max-h-[400px] max-w-[80%] sm:max-h-[500px] sm:max-w-[350px]`}
           sx={{
+            backgroundColor: darkMode ? "rgb(51 65 85)" : "#fff",
             marginLeft: `${index * +20}px`,
             transformOrigin: "top left",
             zIndex:

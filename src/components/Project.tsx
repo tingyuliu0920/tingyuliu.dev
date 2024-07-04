@@ -30,7 +30,7 @@ const Project = ({ data }: ProjectProps) => {
         ))}
       </div>
       <div className="text-right">
-        <a href={link}>
+        <a href={link} target="_blank" rel="noopener noreferrer">
           More <AiOutlineArrowRight style={{ display: "inline-block" }} />
         </a>
       </div>

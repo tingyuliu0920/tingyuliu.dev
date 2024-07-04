@@ -18,7 +18,8 @@ const experienceList = [
   {
     position: "Senior Frontend Developer",
     company: "AISpeech",
-    time: "04/2021 - 01/2023",
+    startTime: "April 2021",
+    endTime: "Jan 2023",
     location: "suzhou,China",
     logo: aispeech,
     responsibilities: [
@@ -29,7 +30,8 @@ const experienceList = [
   {
     position: "Frontend Developer",
     company: "Zhongyan",
-    time: "06/2020 - 03/2021",
+    startTime: "June 2020",
+    endTime: "Mar 2021",
     location: "suzhou,China",
     logo: zhongyan,
     responsibilities: [
@@ -40,7 +42,8 @@ const experienceList = [
   {
     position: "Frontend Developer",
     company: "Yunxuetang",
-    time: "10/2017 - 03/2020",
+    startTime: "Oct 2017",
+    endTime: "Mar 2020",
     location: "suzhou,China",
     logo: yunxuetang,
     responsibilities: [
@@ -52,7 +55,8 @@ const experienceList = [
   {
     position: "Frontend Developer",
     company: "Deyun",
-    time: "03/2016 - 09/2017",
+    startTime: "Mar 2016",
+    endTime: "Sep 2017",
     location: "Wuxi,China",
     responsibilities: [
       "Led the development of multiple projects using jQuery.",
@@ -62,7 +66,7 @@ const experienceList = [
 const projects = [
   {
     name: "Anne's website",
-    link: "",
+    link: "https://github.com/anne0920/pilipala",
     tags: ["Reactjs", "mui", "tailwindCSS", "vite"],
     description: "My personal website",
     time: "2024",

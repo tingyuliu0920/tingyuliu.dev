@@ -41,7 +41,11 @@ const Home = () => {
             </p>
           </section>
           <div className="sm: flex items-center justify-center sm:justify-start">
-            <a href="" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/anne0920"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaGithub className="mr-3 cursor-pointer text-xl" />
             </a>
             <a

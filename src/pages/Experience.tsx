@@ -9,9 +9,13 @@ import TimelineOppositeContent, {
 import TimelineDot from "@mui/lab/TimelineDot";
 import { experienceList } from "../data";
 import { useDocumentTitle } from "../router";
+import { useMediaQuery, useTheme } from "@mui/material";
 
 const Experience = () => {
   useDocumentTitle("Experience | Anne is pilipala");
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <div className="animate-fadeIn">
       <h3 className="mb-3 text-3xl font-bold leading-loose text-green dark:text-gray-300">
@@ -20,21 +24,20 @@ const Experience = () => {
       <div className="flex justify-center">
         <Timeline
           sx={{
-            maxWidth: "620px",
+            maxWidth: "100%",
             [`& .${timelineOppositeContentClasses.root}`]: {
-              width: "110px",
-              flex: "none",
+              display: "flex",
+              justifyContent: matches ? "start" : "end",
+              flex: matches ? "initial" : "0.3",
+              width: matches ? "88px" : "auto",
+              padding: matches ? "6px 4px" : "6x 10px",
             },
           }}
         >
           {experienceList.map((experience) => (
             <TimelineItem key={experience.company}>
-              <TimelineOppositeContent
-                sx={{ m: "auto 0" }}
-                align="right"
-                variant="body2"
-              >
-                <div className="flex flex-col text-base text-gray-700 dark:text-gray-400">
+              <TimelineOppositeContent align="right">
+                <div className="items-right flex flex-col justify-center text-base text-gray-700 dark:text-gray-400">
                   <span>{experience.endTime} </span>-{" "}
                   <span>{experience.startTime}</span>
                 </div>
@@ -44,7 +47,7 @@ const Experience = () => {
                 <TimelineDot></TimelineDot>
                 <TimelineConnector />
               </TimelineSeparator>
-              <TimelineContent sx={{ py: "20px", px: 2 }}>
+              <TimelineContent sx={{ py: "12px" }}>
                 <section className="text-center">
                   <p className="font-bold sm:text-xl">{experience.company}</p>
                   <h6 className="mb-[10px] sm:text-xl">

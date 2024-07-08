@@ -1,9 +1,14 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { ThemeProvider } from "../components/ThemeContext";
+import { useEffect } from "react";
 
 const Root = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <ThemeProvider>
       <div className="bg-gray-50 dark:bg-slate-800 dark:text-gray-200">

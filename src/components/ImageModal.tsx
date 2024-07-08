@@ -1,11 +1,15 @@
-import { Modal } from "@mui/material";
+import { CircularProgress, Modal, Typography } from "@mui/material";
+import useImage from "../hooks/useImage";
 
 interface ImageModalProps {
   imgSrc: string;
   open: boolean;
   handleClose: () => void;
 }
+
 const ImageModal = ({ imgSrc, open, handleClose }: ImageModalProps) => {
+  const { loading, error, image } = useImage(imgSrc);
+  if (error) return <div className="text-gray-300">{error.message}</div>;
   return (
     <Modal
       open={open}
@@ -16,12 +20,19 @@ const ImageModal = ({ imgSrc, open, handleClose }: ImageModalProps) => {
         justifyContent: "center",
       }}
     >
-      <div className="flex items-center justify-center focus-visible:outline-none">
-        <img
-          src={imgSrc}
-          alt="Modal Image"
-          className="max-h-[90vh] w-auto max-w-[84vw] sm:max-w-[600px]"
-        />
+      <div
+        className="flex items-center justify-center focus-visible:outline-none"
+        onClick={handleClose}
+      >
+        {loading ? (
+          <CircularProgress />
+        ) : (
+          <img
+            src={image}
+            alt="Modal Image"
+            className="max-h-[90vh] max-w-[84vw] sm:max-w-[600px]"
+          />
+        )}
       </div>
     </Modal>
   );

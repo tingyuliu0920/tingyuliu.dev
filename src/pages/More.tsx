@@ -16,49 +16,27 @@ const More = () => {
       </h3>
       <section className="mb-[30px]">
         <div className="mb-3 flex leading-8">
-          <img
-            src={leaveIcon}
-            alt=""
-            className="mr-2 mt-1 inline-block h-[30px] w-[30px]"
-          />
-          Nature lover! I enjoy observing animals, insects, and plants.
+          <span className="text-xl"> 🌿 </span> &nbsp;Nature lover! I enjoy
+          observing animals, insects, and plants.
         </div>
         <div className="mb-3 flex leading-8">
-          <img
-            src={movieIcon}
-            alt=""
-            className="mr-2 mt-1 inline-block h-[30px] w-[30px]"
-          />
-          <p>Huge fan of nature documentaries and food documentaries.</p>
+          <span className="text-xl"> 🎬 </span> &nbsp;Huge fan of nature
+          documentaries and food documentaries.
         </div>
         <div className="mb-3 flex leading-8">
-          <img
-            src={placeIcon}
-            alt=""
-            className="mr-2 mt-1 inline-block h-[30px] w-[30px]"
-          />
-          Love travelling.I find myself more when I'm traveling alone.
+          <span className="text-xl"> 🧳 </span> &nbsp;Love travelling.I find
+          myself more when I'm traveling alone.
         </div>
         <div className="mb-3 flex leading-8">
-          <img
-            src={fujiIcon}
-            alt=""
-            className="mr-2 mt-1 inline-block h-[30px] w-[30px]"
-          />
-          <p>
-            Like taking photos.My camera is Fuji XT30.&nbsp;
-            <Link to="/Photography">
-              <span className="text-green underline">Photos</span>
-            </Link>
-          </p>
+          <span className="text-xl">📷 </span>&nbsp;Like taking photos.My camera
+          is Fuji XT30.&nbsp;
+          <Link to="/Photography">
+            <span className="text-green underline">Photos</span>
+          </Link>
         </div>
         <div className="mb-3 flex leading-8">
-          <img
-            src={pencilIcon}
-            alt=""
-            className="mr-2 mt-1 inline-block h-[24px] w-[24px] align-bottom"
-          />
-          Started writing last year, mainly about traveling and daily life.
+          <span className="text-xl">📝</span>&nbsp; Started writing last year,
+          mainly about traveling and daily life.
         </div>
       </section>
 

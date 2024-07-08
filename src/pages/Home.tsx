@@ -27,17 +27,17 @@ const Home = () => {
   };
   const id = open ? "simple-popover" : undefined;
   return (
-    <div>
-      <div className="flex animate-debounce flex-col-reverse items-center justify-between p-10 sm:animate-fadeIn sm:flex-row">
+    <>
+      <div className="mb-[20px] flex animate-debounce flex-col-reverse items-center justify-between p-10 sm:animate-fadeIn sm:flex-row">
         <div className="mt-6 text-center sm:mr-6 sm:mt-0 sm:w-2/3 sm:text-left">
           <section className="mb-[10px] animate-fadeIn">
             <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-200">
               Hello, I'm Anne.
             </h1>
             <p className="mt-4 text-lg">
-              I'm a passionate frontend developer with experience in building
-              responsive and interactive web applications. I love working with
-              modern web technologies and continuously improving my skills.
+              I'm a web developer who enjoys solving problems and continuously
+              learning. I want to become a full-stack developer in the future.
+              Feel free to connect me. 🌻
             </p>
           </section>
           <div className="sm: flex items-center justify-center sm:justify-start">
@@ -50,7 +50,7 @@ const Home = () => {
             </a>
             <a
               href="https://www.linkedin.com/in/
-juniperliu"
+anne0920"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -81,20 +81,20 @@ juniperliu"
           </div>
         </div>
       </div>
-      <div className="mb-[50px] animate-fadeIn px-[10px]">
+      <div className="mb-[20px] animate-fadeIn px-[10px]">
         <h3 className="text-center text-2xl font-bold leading-loose text-green sm:text-left dark:text-gray-300">
           Skills
         </h3>
         <ul>
           {Object.entries(skills).map(([category, value]) => (
             <li key={category} className="whitespace-normal text-pretty py-1">
-              <span className="font-bold">{category}: </span>
+              <span className="font-bold">{category}:&nbsp;&nbsp;</span>
               {value}
             </li>
           ))}
         </ul>
       </div>
-    </div>
+    </>
   );
 };
 

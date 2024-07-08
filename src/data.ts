@@ -7,11 +7,12 @@ import loveOfFire from "./assets/movies/loveOfFire.jpg";
 
 const skills = {
   Languages:
-    "javascript(Vuejs, Reactjs), typescript, Node.js, HTML5, CSS3(SASS, tailwindCSS), JSON",
+    "javascript(Vue.js, React.js), typescript, Node.js, HTML5, CSS3(SASS, tailwindCSS), JSON",
   Bundle: "Webpack, Vite, Rollup, grunt",
-  Testing: "Jest",
-  VersionControl: "Git",
+  Testing: "Jest, React Testing Library",
+  Libraries: "Element UI, Vant, Ant design, Bootstrap, Material UI",
   Debug: "Chrome DevTools, Charles",
+  VersionControl: "Git",
 };
 
 const experienceList = [

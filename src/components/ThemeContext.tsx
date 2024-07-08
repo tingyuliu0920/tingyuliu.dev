@@ -7,16 +7,13 @@ import {
   useState,
 } from "react";
 
-// Define the context type
 type ThemeContextType = {
   darkMode: boolean;
   toggleDarkMode: () => void;
 };
 
-// Create the context with default values
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-// Custom hook to use the context
 export const useTheme = (): ThemeContextType => {
   const context = useContext(ThemeContext);
   if (!context) {

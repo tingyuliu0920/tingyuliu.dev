@@ -1,4 +1,4 @@
-import { CircularProgress, Modal, Typography } from "@mui/material";
+import { CircularProgress, Modal } from "@mui/material";
 import useImage from "../hooks/useImage";
 
 interface ImageModalProps {

@@ -7,7 +7,7 @@ import ImageModal from "../components/ImageModal";
 const importAllImages = async (): Promise<Record<string, string>> => {
   try {
     const imageModules = await import.meta.glob(
-      "../assets/compressed-photos/*.{png,jpg,jpeg}",
+      "@compressedPhotos/*.{png,jpg,jpeg}",
     );
     const imagePaths = Object.keys(imageModules);
 
@@ -20,7 +20,7 @@ const importAllImages = async (): Promise<Record<string, string>> => {
 
     return imagePaths.reduce(
       (imageMap, path, index) => {
-        const fileName = path.replace("../assets/compressed-photos/", "");
+        const fileName = path.replace("@compressedPhotos/", "");
         imageMap[fileName] = loadedImages[index];
         return imageMap;
       },
@@ -64,7 +64,9 @@ const Photography = () => {
               src={value}
               alt={key}
               loading="lazy"
-              onClick={() => setSelectedImage(value.replace("compressed-", ""))}
+              onClick={() =>
+                setSelectedImage(value.replace("@compressedPhotos", "@photos"))
+              }
             />
           </ImageListItem>
         ))}

@@ -7,7 +7,7 @@ import ImageModal from "../components/ImageModal";
 const importAllImages = async (): Promise<Record<string, string>> => {
   try {
     const imageModules = await import.meta.glob(
-      "@compressedPhotos/*.{png,jpg,jpeg}",
+      "../assets/compressed-photos/*.{png,jpg,jpeg}",
     );
     const imagePaths = Object.keys(imageModules);
 
@@ -20,7 +20,7 @@ const importAllImages = async (): Promise<Record<string, string>> => {
 
     return imagePaths.reduce(
       (imageMap, path, index) => {
-        const fileName = path.replace("@compressedPhotos/", "");
+        const fileName = path.replace("../assets/compressed-photos/", "");
         imageMap[fileName] = loadedImages[index];
         return imageMap;
       },
@@ -31,11 +31,17 @@ const importAllImages = async (): Promise<Record<string, string>> => {
     return {};
   }
 };
+const filterImages = (url: string): string => {
+  const regex = /\.(png|jpg|jpeg)$/;
+  return url.replace("/compressed-photos/", "/photos/").replace(regex, "@2x$&");
+};
+
 const Photography = () => {
   useDocumentTitle("Photography | Anne is pilipala");
   const [images, setImages] = useState<Record<string, string>>({});
   // const [images, setImages] = useState<Record<string, { default: string }>>({});
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   const handleCloseModal = () => {
     setSelectedImage(null);
   };
@@ -64,9 +70,7 @@ const Photography = () => {
               src={value}
               alt={key}
               loading="lazy"
-              onClick={() =>
-                setSelectedImage(value.replace("@compressedPhotos", "@photos"))
-              }
+              onClick={() => setSelectedImage(filterImages(value))}
             />
           </ImageListItem>
         ))}

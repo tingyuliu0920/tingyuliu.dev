@@ -6,13 +6,4 @@ import path from "path";
 export default defineConfig({
   base: "/pilipala/",
   plugins: [react()],
-  resolve: {
-    alias: {
-      "@compressedPhotos": path.resolve(
-        __dirname,
-        "src/assets/compressed-photos",
-      ),
-      "@photos": path.resolve(__dirname, "src/assets/photos"),
-    },
-  },
 });

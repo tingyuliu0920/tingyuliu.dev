@@ -1,11 +1,6 @@
 import { Link } from "react-router-dom";
 import Cards from "../components/Cards";
 import { movies } from "../data";
-import fujiIcon from "../assets/icons/fuji.png";
-import leaveIcon from "../assets/icons/leaves.png";
-import placeIcon from "../assets/icons/place.png";
-import movieIcon from "../assets/icons/movie.png";
-import pencilIcon from "../assets/icons/pencil.png";
 import { useDocumentTitle } from "../router";
 const More = () => {
   useDocumentTitle("More | Anne is pilipala");

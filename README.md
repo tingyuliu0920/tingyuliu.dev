@@ -1,4 +1,4 @@
-# Anne's website
+# Tingyu's website
 
 This is a responsive personal portfolio website, responsive for all devices, built using React, ts, mui and tailwindCSS.
 

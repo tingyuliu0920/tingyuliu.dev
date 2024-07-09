@@ -37,7 +37,7 @@ const getHigherImagePath = (imageName: string): string => {
 };
 
 const Photography = () => {
-  useDocumentTitle("Photography | Anne is pilipala");
+  useDocumentTitle("Photography | Tingyu Liu");
   const [images, setImages] = useState<Record<string, string>>({});
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 

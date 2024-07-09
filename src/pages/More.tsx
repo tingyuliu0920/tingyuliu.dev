@@ -3,7 +3,7 @@ import Cards from "../components/Cards";
 import { movies } from "../data";
 import { useDocumentTitle } from "../router";
 const More = () => {
-  useDocumentTitle("More | Anne is pilipala");
+  useDocumentTitle("More | Tingyu Liu");
   return (
     <div className="animate-fadeIn">
       <h3 className="mb-3 text-3xl font-bold leading-loose text-green dark:text-gray-300">

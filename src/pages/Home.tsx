@@ -6,7 +6,7 @@ import { Popover, Typography } from "@mui/material";
 import { useState } from "react";
 import { useDocumentTitle } from "../router";
 const Home = () => {
-  useDocumentTitle("Anne is pilipala");
+  useDocumentTitle("Tingyu Liu");
   const email = "rubyll0920@gmail.com";
 
   const [anchorEl, setAnchorEl] = useState<SVGSVGElement | null>(null);
@@ -32,7 +32,7 @@ const Home = () => {
         <div className="mt-6 text-left sm:mr-6 sm:mt-0 sm:w-2/3">
           <section className="mb-[10px] animate-fadeIn">
             <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-200">
-              Hello, I'm Anne.
+              Hello, I'm Tingyu.
             </h1>
             <p className="mt-4 text-lg">
               I'm a web developer who enjoys solving problems and continuously
@@ -42,7 +42,7 @@ const Home = () => {
           </section>
           <div className="sm: flex items-center justify-start">
             <a
-              href="https://github.com/anne0920"
+              href="https://github.com/tingyuliu0920"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -50,7 +50,7 @@ const Home = () => {
             </a>
             <a
               href="https://www.linkedin.com/in/
-tingyuliu-anne"
+tingyuliu0920"
               target="_blank"
               rel="noopener noreferrer"
             >

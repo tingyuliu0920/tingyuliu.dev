@@ -13,7 +13,7 @@ import { useMediaQuery, useTheme } from "@mui/material";
 import { getImageURL } from "../utils/imageUtil";
 
 const Experience = () => {
-  useDocumentTitle("Experience | Anne is pilipala");
+  useDocumentTitle("Experience | Tingyu Liu");
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
 

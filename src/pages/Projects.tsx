@@ -3,7 +3,7 @@ import { projects } from "../data";
 import { useDocumentTitle } from "../router";
 
 const Projects = () => {
-  useDocumentTitle("Projects | Anne is pilipala");
+  useDocumentTitle("Projects | Tingyu Liu");
   return (
     <div className="animate-fadeIn">
       <h3 className="mb-3 text-3xl font-bold leading-loose text-green dark:text-gray-300">

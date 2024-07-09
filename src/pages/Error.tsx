@@ -1,7 +1,7 @@
 import { useDocumentTitle } from "../router";
 
 const Error = () => {
-  useDocumentTitle("404 | Anne is pilipala");
+  useDocumentTitle("404 | Tingyu Liu");
   return (
     <div className="mt-[50px] flex flex-col items-center justify-center px-10">
       <div className="text-6xl">😢</div>

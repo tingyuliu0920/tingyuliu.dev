@@ -6,10 +6,4 @@ import path from "path";
 export default defineConfig({
   base: "/pilipala/",
   plugins: [react()],
-  optimizeDeps: {
-    exclude: [
-      // Add the dependencies causing the issue here
-      "chunk-CNRPKY7A",
-    ],
-  },
 });

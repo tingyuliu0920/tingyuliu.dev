@@ -29,7 +29,7 @@ const Home = () => {
   return (
     <>
       <div className="mb-[20px] flex animate-debounce flex-col-reverse items-center justify-between p-10 sm:animate-fadeIn sm:flex-row">
-        <div className="mt-6 text-center sm:mr-6 sm:mt-0 sm:w-2/3 sm:text-left">
+        <div className="mt-6 text-left sm:mr-6 sm:mt-0 sm:w-2/3">
           <section className="mb-[10px] animate-fadeIn">
             <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-200">
               Hello, I'm Anne.
@@ -40,7 +40,7 @@ const Home = () => {
               Feel free to connect me. 🌻
             </p>
           </section>
-          <div className="sm: flex items-center justify-center sm:justify-start">
+          <div className="sm: flex items-center justify-start">
             <a
               href="https://github.com/anne0920"
               target="_blank"
@@ -50,7 +50,7 @@ const Home = () => {
             </a>
             <a
               href="https://www.linkedin.com/in/
-anne0920"
+tingyuliu-anne"
               target="_blank"
               rel="noopener noreferrer"
             >

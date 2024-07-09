@@ -10,6 +10,7 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import { experienceList } from "../data";
 import { useDocumentTitle } from "../router";
 import { useMediaQuery, useTheme } from "@mui/material";
+import { getImageURL } from "../utils/imageUtil";
 
 const Experience = () => {
   useDocumentTitle("Experience | Anne is pilipala");
@@ -55,7 +56,7 @@ const Experience = () => {
                   </h6>
                   {experience.logo && (
                     <img
-                      src={experience.logo}
+                      src={getImageURL(`companys/${experience.logo}`)}
                       alt=""
                       className="mb-[10px] inline-block w-[100px] sm:w-[150px]"
                     />

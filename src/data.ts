@@ -1,6 +1,3 @@
-import aispeech from "./assets/companys/aispeech.png";
-import zhongyan from "./assets/companys/zhongyan.png";
-import yunxuetang from "./assets/companys/yunxuetang.png";
 import deadpoets from "./assets/movies/deadpoets.jpg";
 import harrypotter from "./assets/movies/harrypotter.jpg";
 import loveOfFire from "./assets/movies/loveOfFire.jpg";
@@ -22,7 +19,7 @@ const experienceList = [
     startTime: "April 2021",
     endTime: "Jan 2023",
     location: "suzhou,China",
-    logo: aispeech,
+    logo: "aispeech.png",
     responsibilities: [
       "Led the development of subway applications and a sound detection system.",
       "Managed frontend engineers and participated in departmental technical seminars.",
@@ -34,7 +31,7 @@ const experienceList = [
     startTime: "June 2020",
     endTime: "Mar 2021",
     location: "suzhou,China",
-    logo: zhongyan,
+    logo: "zhongyan.png",
     responsibilities: [
       "Led the development of an enterprise exam system and an online exam application.",
       "Managed frontend interns and conducted technical sharing sessions.",
@@ -46,7 +43,7 @@ const experienceList = [
     startTime: "Oct 2017",
     endTime: "Mar 2020",
     location: "suzhou,China",
-    logo: yunxuetang,
+    logo: "yunxuetang.png",
     responsibilities: [
       "Led the development of the Mentorship project for the enterprise learning platform.",
       "Separated sub-projects from the main project.",

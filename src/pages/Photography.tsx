@@ -31,15 +31,14 @@ const importAllImages = async (): Promise<Record<string, string>> => {
     return {};
   }
 };
-const filterImages = (url: string): string => {
+const getHigherImagePath = (imageName: string): string => {
   const regex = /\.(png|jpg|jpeg)$/;
-  return url.replace("/compressed-photos/", "/photos/").replace(regex, "@2x$&");
+  return `photos/${imageName.replace(regex, "@2x$&")}`;
 };
 
 const Photography = () => {
   useDocumentTitle("Photography | Anne is pilipala");
   const [images, setImages] = useState<Record<string, string>>({});
-  // const [images, setImages] = useState<Record<string, { default: string }>>({});
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const handleCloseModal = () => {
@@ -50,11 +49,6 @@ const Photography = () => {
       try {
         const fetchedImages = await importAllImages();
         setImages(fetchedImages);
-        // const images = import.meta.glob<{ default: string }>(
-        //   "../assets/compressed-photos/*.{jpg,jpeg,png}",
-        //   { eager: true },
-        // );
-        // setImages(images);
       } catch (error) {
         console.error("Fetch pictures error:", error);
       }
@@ -70,7 +64,7 @@ const Photography = () => {
               src={value}
               alt={key}
               loading="lazy"
-              onClick={() => setSelectedImage(filterImages(value))}
+              onClick={() => setSelectedImage(getHigherImagePath(key))}
             />
           </ImageListItem>
         ))}

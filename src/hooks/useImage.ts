@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react";
+import { getImageURL } from "../utils/imageUtil";
 
 interface useImageResult {
   loading: boolean;
   error: Error | null;
   image: string | undefined;
 }
-const useImage = (fileName: string): useImageResult => {
+const useImage = (imagePath: string): useImageResult => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<Error | null>(null);
   const [image, setImage] = useState<string | undefined>(undefined);
 
   useEffect(() => {
-    const fetchImage = async () => {
+    const fetchImage = () => {
       try {
-        /* @vite-ignore */
-        const response = await import(fileName);
-        setImage(response.default);
+        const imgUrl = getImageURL(`${imagePath}`);
+        setImage(imgUrl);
       } catch (err: unknown) {
         if (err instanceof Error) {
           setError(err);
@@ -26,7 +26,7 @@ const useImage = (fileName: string): useImageResult => {
     };
 
     fetchImage();
-  }, [fileName]);
+  }, [imagePath]);
 
   return {
     loading,

@@ -1,7 +1,7 @@
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import { useEffect, useState } from "react";
-import { useDocumentTitle } from "../router";
+import { Helmet } from "react-helmet";
 import ImageModal from "../components/ImageModal";
 
 const importAllImages = async (): Promise<Record<string, string>> => {
@@ -37,7 +37,6 @@ const getHigherImagePath = (imageName: string): string => {
 };
 
 const Photography = () => {
-  useDocumentTitle("Photography | Tingyu Liu");
   const [images, setImages] = useState<Record<string, string>>({});
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -57,6 +56,7 @@ const Photography = () => {
   }, []);
   return (
     <>
+      <Helmet title="Photography | Tingyu Liu"></Helmet>
       <ImageList variant="masonry" cols={3} gap={10}>
         {Object.entries(images).map(([key, value]) => (
           <ImageListItem key={key}>

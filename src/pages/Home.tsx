@@ -4,9 +4,8 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { Popover, Typography } from "@mui/material";
 import { useState } from "react";
-import { useDocumentTitle } from "../router";
+import { Helmet } from "react-helmet";
 const Home = () => {
-  useDocumentTitle("Tingyu Liu");
   const email = "rubyll0920@gmail.com";
 
   const [anchorEl, setAnchorEl] = useState<SVGSVGElement | null>(null);
@@ -28,6 +27,7 @@ const Home = () => {
   const id = open ? "simple-popover" : undefined;
   return (
     <>
+      <Helmet title="Tingyu Liu"></Helmet>
       <div className="mb-[20px] flex animate-debounce flex-col-reverse items-center justify-between p-10 sm:animate-fadeIn sm:flex-row">
         <div className="mt-6 text-left sm:mr-6 sm:mt-0 sm:w-2/3">
           <section className="mb-[10px] animate-fadeIn">

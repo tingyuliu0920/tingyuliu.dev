@@ -8,17 +8,17 @@ import TimelineOppositeContent, {
 } from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import { experienceList } from "../data";
-import { useDocumentTitle } from "../router";
 import { useMediaQuery, useTheme } from "@mui/material";
 import { getImageURL } from "../utils/imageUtil";
+import { Helmet } from "react-helmet";
 
 const Experience = () => {
-  useDocumentTitle("Experience | Tingyu Liu");
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <div className="animate-fadeIn">
+      <Helmet title="Experience | Tingyu Liu"></Helmet>
       <h3 className="mb-3 text-3xl font-bold leading-loose text-green dark:text-gray-300">
         Experience
       </h3>

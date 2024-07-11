@@ -1,11 +1,11 @@
+import { Helmet } from "react-helmet";
 import Project from "../components/Project";
 import { projects } from "../data";
-import { useDocumentTitle } from "../router";
 
 const Projects = () => {
-  useDocumentTitle("Projects | Tingyu Liu");
   return (
     <div className="animate-fadeIn">
+      <Helmet title="Projects | Tingyu Liu"></Helmet>
       <h3 className="mb-3 text-3xl font-bold leading-loose text-green dark:text-gray-300">
         Projects
       </h3>

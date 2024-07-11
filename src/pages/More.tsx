@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import Cards from "../components/Cards";
 import { movies } from "../data";
-import { useDocumentTitle } from "../router";
+import { Helmet } from "react-helmet";
 const More = () => {
-  useDocumentTitle("More | Tingyu Liu");
   return (
     <div className="animate-fadeIn">
+      <Helmet title="More | Tingyu Liu"></Helmet>
       <h3 className="mb-3 text-3xl font-bold leading-loose text-green dark:text-gray-300">
         More About Who I Am
       </h3>

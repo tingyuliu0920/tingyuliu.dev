@@ -1,21 +1,24 @@
 import deadpoets from "./assets/movies/deadpoets.jpg";
 import harrypotter from "./assets/movies/harrypotter.jpg";
 import loveOfFire from "./assets/movies/loveOfFire.jpg";
-
+import haijieriji from "./assets/movies/haijieriji.jpg";
+import ferris from "./assets/movies/Ferris.jpg";
+import yuzhou from "./assets/movies/yuzhoutansuobianjibu.jpg";
 const skills = {
   Languages:
-    "javascript(Vue.js, React.js), typescript, Node.js, HTML5, CSS3(SASS, tailwindCSS), JSON",
+    "javascript(Vue.js, React.js), typescript, Node.js(Express.js), HTML5, CSS3(SASS, tailwindCSS), JSON, MySQL",
   Bundle: "Webpack, Vite, Rollup, grunt",
   Testing: "Jest, React Testing Library",
   Libraries: "Element UI, Vant, Ant design, Bootstrap, Material UI",
   Debug: "Chrome DevTools, Charles",
-  VersionControl: "Git",
+  VersionControl: "Git, Github",
 };
 
 const experienceList = [
   {
     position: "Senior Frontend Developer",
     company: "AISpeech",
+    companyUrl: "https://www.aispeech.com/",
     startTime: "April 2021",
     endTime: "Jan 2023",
     location: "suzhou,China",
@@ -28,6 +31,7 @@ const experienceList = [
   {
     position: "Frontend Developer",
     company: "Zhongyan",
+    companyUrl: "https://www.wenjuan.com/",
     startTime: "June 2020",
     endTime: "Mar 2021",
     location: "suzhou,China",
@@ -40,6 +44,7 @@ const experienceList = [
   {
     position: "Frontend Developer",
     company: "Yunxuetang",
+    companyUrl: "https://www.yxt.com/",
     startTime: "Oct 2017",
     endTime: "Mar 2020",
     location: "suzhou,China",
@@ -53,6 +58,7 @@ const experienceList = [
   {
     position: "Frontend Developer",
     company: "Deyun",
+    companyUrl: "",
     startTime: "Mar 2016",
     endTime: "Sep 2017",
     location: "Wuxi,China",
@@ -82,9 +88,26 @@ const movies = [
     line: "And medicine, law, business, engineering, these are noble pursuits, and necessary to sustain life.But poetry, beauty, romance, love these are what we stay live for.",
   },
   {
+    name: "海街日记",
+    picture: haijieriji,
+    line: "在人群里划一艘船，晕倒在柔软的云里，说无关紧要的事。",
+  },
+  {
+    name: "宇宙探索编辑部",
+    picture: yuzhou,
+    line: "生命没有意义，生命的存在本身就是意义。",
+  },
+  {
     name: "Harry Potter",
     picture: harrypotter,
     line: "It's not our abilities that show what we truly are.It is our choices.",
   },
 ];
-export { skills, projects, experienceList, movies };
+const articles = [
+  {
+    title: "Our stories in Egypt",
+    magazine: "悦游CondeNastTraveler",
+    url: "https://mp.weixin.qq.com/s/ofTvY7u6QsbDflQoCoXBhg",
+  },
+];
+export { skills, projects, experienceList, movies, articles };

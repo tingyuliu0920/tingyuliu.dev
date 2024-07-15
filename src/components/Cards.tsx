@@ -22,17 +22,23 @@ const Cards = ({ movies }: CardsProps) => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % movies.length);
   };
   return (
-    <div className="sm: relative mx-[10px] flex h-[400px] items-center justify-start sm:h-[500px]">
+    <div className="sm: relative mx-[10px] mt-5 flex h-[400px] items-center justify-center sm:mt-0 sm:h-[500px] sm:justify-start">
       {movies.map((movie, index) => (
         <Card
           key={index}
-          className={`absolute transform transition-transform ${
-            index === activeIndex ? "rotate-0" : "rotate-5"
-          } max-h-[400px] max-w-[80%] sm:max-h-[500px] sm:max-w-[350px]`}
+          className={`absolute max-h-[400px] max-w-[80%] transform transition-transform sm:max-h-[500px] sm:max-w-[350px]`}
           sx={{
             backgroundColor: darkMode ? "rgb(51 65 85)" : "#fff",
-            marginLeft: `${index * +20}px`,
-            transformOrigin: "top left",
+            transformOrigin: "center",
+            marginLeft: {
+              xs: `${index % 2 === 0 ? 20 : -20}px`,
+              sm: `${index * 30}px`,
+            },
+            transform: {
+              xs: `rotate(${index % 2 === 0 ? index * 2 : index * -2}deg)`,
+              sm: "rotate(0deg)",
+            },
+
             zIndex:
               index === activeIndex ? movies.length : movies.length - index,
             display: "flex",
@@ -45,7 +51,7 @@ const Cards = ({ movies }: CardsProps) => {
           <CardActionArea>
             <CardMedia
               component="img"
-              className="max-h-[250px] w-full sm:max-h-[350px]"
+              className="max-h-[250px] w-full bg-cover sm:max-h-[350px]"
               image={movie.picture}
               alt="green iguana"
             />

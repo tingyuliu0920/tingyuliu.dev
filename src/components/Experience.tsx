@@ -10,16 +10,14 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import { experienceList } from "../data";
 import { useMediaQuery, useTheme } from "@mui/material";
 import { getImageURL } from "../utils/imageUtil";
-import { Helmet } from "react-helmet";
 
 const Experience = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <div className="animate-fadeIn">
-      <Helmet title="Experience | Tingyu Liu"></Helmet>
-      <h3 className="mb-3 text-3xl font-bold leading-loose text-green dark:text-gray-300">
+    <div className="animate-fadeIn px-[10px]">
+      <h3 className="mb-3 text-2xl font-bold leading-loose text-green dark:text-gray-300">
         Experience
       </h3>
       <div className="flex justify-center">
@@ -45,13 +43,30 @@ const Experience = () => {
               </TimelineOppositeContent>
               <TimelineSeparator>
                 <TimelineConnector />
-                <TimelineDot></TimelineDot>
+                <TimelineDot
+                  sx={{
+                    background: "#7fc06e",
+                  }}
+                ></TimelineDot>
                 <TimelineConnector />
               </TimelineSeparator>
               <TimelineContent sx={{ py: "12px" }}>
                 <section className="text-center">
-                  <p className="font-bold sm:text-xl">{experience.company}</p>
-                  <h6 className="mb-[10px] sm:text-xl">
+                  <p className="sm:text-xl">
+                    {experience.companyUrl ? (
+                      <a
+                        href={experience.companyUrl}
+                        target="_blank"
+                        className="text-green hover:underline"
+                        rel="noopener noreferrer"
+                      >
+                        {experience.company}
+                      </a>
+                    ) : (
+                      <>{experience.company}</>
+                    )}
+                  </p>
+                  <h6 className="mb-[10px] text-slate-700 sm:text-xl dark:text-slate-300">
                     {experience.position}
                   </h6>
                   {experience.logo && (

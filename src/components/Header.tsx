@@ -9,9 +9,8 @@ const Header = () => {
       <div className="grid grid-flow-col gap-1 sm:gap-2">
         {[
           ["Home", "/"],
-          ["Experience", "/experience"],
           ["Projects", "/projects"],
-          ["More", "/more"],
+          ["About me", "/more"],
         ].map(([title, url]) => {
           return (
             <NavLink

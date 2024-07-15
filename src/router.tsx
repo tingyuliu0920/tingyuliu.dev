@@ -1,7 +1,6 @@
 import { RouteObject } from "react-router-dom";
 import Root from "./pages/Root";
 import Projects from "./pages/Projects";
-import Experience from "./pages/Experience";
 import More from "./pages/More";
 import Home from "./pages/Home";
 import Photography from "./pages/Photography";
@@ -16,10 +15,6 @@ const routes: RouteObject[] = [
       {
         path: "/projects",
         element: <Projects />,
-      },
-      {
-        path: "/experience",
-        element: <Experience />,
       },
       {
         path: "/more",

@@ -2,7 +2,6 @@ import deadpoets from "./assets/movies/deadpoets.jpg";
 import harrypotter from "./assets/movies/harrypotter.jpg";
 import loveOfFire from "./assets/movies/loveOfFire.jpg";
 import haijieriji from "./assets/movies/haijieriji.jpg";
-import ferris from "./assets/movies/Ferris.jpg";
 import yuzhou from "./assets/movies/yuzhoutansuobianjibu.jpg";
 const skills = {
   Languages:

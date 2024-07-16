@@ -1,6 +1,6 @@
 # Tingyu's website
 
-This is a responsive personal portfolio website, responsive for all devices, built using React, ts, mui and tailwindCSS.
+This is a responsive personal portfolio website, compatible with all devices. It was built using React, TypeScript, MUI, and Tailwind CSS, and deployed on Netlify.
 
 ## License
 

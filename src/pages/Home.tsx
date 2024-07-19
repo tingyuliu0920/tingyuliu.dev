@@ -7,7 +7,7 @@ import { useState } from "react";
 import { Helmet } from "react-helmet";
 import Experience from "../components/Experience";
 const Home = () => {
-  const email = "rubyll0920@gmail.com";
+  const email = "tingyuliu.dev@gmail.com";
 
   const [anchorEl, setAnchorEl] = useState<SVGSVGElement | null>(null);
   const [open, setOpen] = useState<boolean>(false);

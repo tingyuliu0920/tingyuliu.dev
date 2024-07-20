@@ -24,11 +24,11 @@ const routes: RouteObject[] = [
         path: "/photography",
         element: <Photography />,
       },
-      {
-        path: "*",
-        element: <Error />,
-      },
     ],
+  },
+  {
+    path: "*",
+    element: <Error />,
   },
 ];
 

@@ -38,7 +38,6 @@ const Cards = ({ movies }: CardsProps) => {
               xs: `rotate(${index % 2 === 0 ? index * 2 : index * -2}deg)`,
               sm: "rotate(0deg)",
             },
-
             zIndex:
               index === activeIndex ? movies.length : movies.length - index,
             display: "flex",

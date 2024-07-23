@@ -68,7 +68,7 @@ const experienceList = [
 ];
 const projects = [
   {
-    name: "Tingyu's website",
+    name: "tingyuliu.dev",
     link: "https://github.com/tingyuliu0920/tingyuliu.dev",
     tags: ["Reactjs", "mui", "tailwindCSS", "vite"],
     description: "My personal website",

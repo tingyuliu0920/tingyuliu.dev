@@ -37,28 +37,31 @@ const Home = () => {
             </h1>
             <p className="mt-4 text-lg">
               I'm a web developer who enjoys solving problems and continuously
-              learning. <br />
-              This website is still growing. I hope to showcase more of myself
-              here. Feel free to connect with me. 🌻
+              learning.
+              <br /> This website is mainly about my coding experience and a few
+              pieces of my life. I hope you have a great experience here. 🌻
             </p>
           </section>
-          <div className="sm: flex items-center justify-center sm:justify-start">
+          <div className="sm: flex items-center justify-start text-lg">
+            You can find me on&nbsp;
             <a
               href="https://github.com/tingyuliu0920"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaGithub className="mr-3 cursor-pointer text-xl" />
+              <FaGithub className="mr-1 cursor-pointer text-lg" />
             </a>
+            ,&nbsp;
             <a
               href="https://www.linkedin.com/in/
 tingyuliu0920"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLinkedin className="mr-3 cursor-pointer text-xl" />
+              <FaLinkedin className="mr-1 cursor-pointer text-lg" />
             </a>
-            <MdEmail className="cursor-pointer text-xl" onClick={handleCopy} />
+            or via&nbsp;
+            <MdEmail className="cursor-pointer text-lg" onClick={handleCopy} />
             <Popover
               id={id}
               open={open}

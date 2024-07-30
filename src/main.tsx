@@ -7,6 +7,6 @@ import routes from "./router";
 const router = createBrowserRouter(routes);
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <ThemeProvider>
-    <RouterProvider router={router} />,
+    <RouterProvider router={router} />
   </ThemeProvider>,
 );

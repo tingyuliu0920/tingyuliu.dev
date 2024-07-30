@@ -17,7 +17,7 @@ const routes: RouteObject[] = [
         element: <Projects />,
       },
       {
-        path: "/more",
+        path: "/about",
         element: <More />,
       },
       {

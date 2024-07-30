@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import Cards from "../components/Cards";
 import { articles, movies } from "../data";
 import { Helmet } from "react-helmet";
+import { AiOutlineLink } from "react-icons/ai";
+
 const More = () => {
   return (
     <div className="animate-fadeIn">
@@ -57,12 +59,18 @@ const More = () => {
         <Cards movies={movies} />
       </div>
       <section className="mb-[30px]">
-        <h5 className="text-2xl font-bold leading-loose text-green dark:text-gray-300">
-          Other Things I Like
+        <h5 className="text-2xl leading-loose text-green">
+          <a
+            href="http://blog.tingyuliu.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AiOutlineLink className="inline-block" />
+            My Blog
+          </a>
         </h5>
-        <p>
-          Music, hiking, riding a bike, chatting with friends, playing games,
-          puzzles, painting, zakka...
+        <p className="text-gray-500 dark:text-gray-400">
+          I keep some of my coding ideas here.
         </p>
       </section>
       <p className="mt-[30px] text-green">To be continued...</p>

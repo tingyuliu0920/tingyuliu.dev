@@ -10,7 +10,7 @@ const Header = () => {
         {[
           ["Home", "/"],
           ["Projects", "/projects"],
-          ["About me", "/more"],
+          ["About me", "/about"],
         ].map(([title, url]) => {
           return (
             <NavLink

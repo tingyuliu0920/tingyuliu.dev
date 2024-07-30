@@ -6,6 +6,7 @@ import { Popover, Typography } from "@mui/material";
 import { useState } from "react";
 import { Helmet } from "react-helmet";
 import Experience from "../components/Experience";
+import Title from "../components/Title";
 const Home = () => {
   const email = "tingyuliu.dev@gmail.com";
 
@@ -87,9 +88,7 @@ tingyuliu0920"
         </div>
       </div>
       <div className="mb-[40px] animate-fadeIn px-[10px]">
-        <h3 className="text-2xl font-bold leading-loose text-green dark:text-gray-300">
-          Skills
-        </h3>
+        <Title>Skills</Title>
         <ul>
           {Object.entries(skills).map(([category, value]) => (
             <li key={category} className="whitespace-normal py-1">

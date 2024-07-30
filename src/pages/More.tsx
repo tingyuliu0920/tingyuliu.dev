@@ -3,14 +3,13 @@ import Cards from "../components/Cards";
 import { articles, movies } from "../data";
 import { Helmet } from "react-helmet";
 import { AiOutlineLink } from "react-icons/ai";
+import Title from "../components/Title";
 
 const More = () => {
   return (
     <div className="animate-fadeIn">
-      <Helmet title="More | Tingyu Liu"></Helmet>
-      <h3 className="mb-3 text-3xl font-bold leading-loose text-green dark:text-gray-300">
-        About me
-      </h3>
+      <Helmet title="About me | Tingyu Liu"></Helmet>
+      <Title size="text-3xl">About me</Title>
       <section className="mb-[30px]">
         <div className="mb-3 flex leading-8">
           <span className="text-xl"> 🌿 </span>&nbsp;Nature lover! I enjoy
@@ -40,9 +39,7 @@ const More = () => {
       </section>
 
       <section className="mb-[30px]">
-        <h5 className="text-2xl font-bold leading-loose text-green dark:text-gray-300">
-          Articles
-        </h5>
+        <Title>Articles</Title>
         {articles.map((article) => (
           <p key={article.title}>
             <a className="text-green underline" href={article.url}>
@@ -53,9 +50,7 @@ const More = () => {
         ))}
       </section>
       <div className="mb-[30px]">
-        <h5 className="text-2xl font-bold leading-loose text-green dark:text-gray-300">
-          My Favourite Movies
-        </h5>
+        <Title>My Favourite Movies</Title>
         <Cards movies={movies} />
       </div>
       <section className="mb-[30px]">

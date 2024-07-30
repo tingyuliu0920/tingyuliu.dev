@@ -10,6 +10,7 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import { experienceList } from "../data";
 import { useMediaQuery, useTheme } from "@mui/material";
 import { getImageURL } from "../utils/imageUtil";
+import Title from "./Title";
 
 const Experience = () => {
   const theme = useTheme();
@@ -17,9 +18,7 @@ const Experience = () => {
 
   return (
     <div className="animate-fadeIn px-[10px]">
-      <h3 className="mb-3 text-2xl font-bold leading-loose text-green dark:text-gray-300">
-        Experience
-      </h3>
+      <Title>Experience</Title>
       <div className="flex justify-center">
         <Timeline
           sx={{

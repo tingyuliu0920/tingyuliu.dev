@@ -23,7 +23,6 @@ export default {
       },
       colors: {
         green: "#2E8B57",
-        linkedinBlue: "#0077B5",
       },
     },
   },

@@ -54,7 +54,7 @@ const More = () => {
         <Cards movies={movies} />
       </section>
       <section className="mb-[30px]">
-        <h5 className="text-2xl font-bold leading-loose text-green">
+        <h5 className="text-2xl font-bold leading-loose text-green hover:underline">
           <a
             href="http://blog.tingyuliu.dev"
             target="_blank"

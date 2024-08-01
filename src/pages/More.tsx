@@ -54,7 +54,7 @@ const More = () => {
         <Cards movies={movies} />
       </section>
       <section className="mb-[30px]">
-        <h5 className="text-2xl leading-loose text-green">
+        <h5 className="text-2xl font-bold leading-loose text-green">
           <a
             href="http://blog.tingyuliu.dev"
             target="_blank"
@@ -68,6 +68,21 @@ const More = () => {
           I keep some of my coding ideas here.
         </p>
       </section>
+      {/* <section className="mb-[30px]">
+        <Title>What i'm doing now</Title>
+        <ul className="text-gray-700 dark:text-gray-300">
+          <li className="leading-8">
+            - Learn some new things and work on personal projects.
+          </li>
+          <li className="leading-8">
+            - Continue with 15 minutes of exercise daily.
+          </li>
+          <li className="leading-8">
+            - Stuck on the first round of Assassin's Ezio...
+          </li>
+        </ul>
+      </section> */}
+
       <p className="mt-[30px] text-green">To be continued...</p>
     </div>
   );

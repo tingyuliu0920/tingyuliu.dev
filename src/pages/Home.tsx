@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Helmet } from "react-helmet";
 import Experience from "../components/Experience";
 import Title from "../components/Title";
+
 const Home = () => {
   const email = "tingyuliu.dev@gmail.com";
 
@@ -36,11 +37,12 @@ const Home = () => {
             <h1 className="text-center text-3xl font-bold text-gray-800 sm:text-left dark:text-gray-200">
               Hello, I'm Tingyu
             </h1>
-            <p className="mt-4 text-lg">
+            <p className="mt-4 text-pretty text-lg">
               I'm a web developer who enjoys solving problems and continuously
               learning.
-              <br /> This website is mainly about my coding experience and a few
-              pieces of my life. I hope you have a great experience here. 🌻
+              <br />
+              This website is about my coding experience and a few pieces of my
+              life. I hope you have a great experience here.
             </p>
           </section>
           <div className="sm: flex items-center justify-start text-lg">
@@ -50,7 +52,7 @@ const Home = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaGithub className="mr-1 cursor-pointer text-lg" />
+              <FaGithub className="mr-1 transform cursor-pointer text-lg transition-transform duration-300 ease-in-out hover:scale-110" />
             </a>
             ,&nbsp;
             <a
@@ -59,10 +61,15 @@ tingyuliu0920"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLinkedin className="mr-1 cursor-pointer text-lg" />
+              <FaLinkedin className="mr-1 transform cursor-pointer text-lg transition-transform duration-300 ease-in-out hover:scale-110" />
             </a>
             or via&nbsp;
-            <MdEmail className="cursor-pointer text-lg" onClick={handleCopy} />
+            <a href="mailto:tingyuliu.dev@gmail.com">
+              <MdEmail
+                className="transform cursor-pointer text-lg transition-transform duration-300 ease-in-out hover:scale-110"
+                onClick={handleCopy}
+              />
+            </a>
             <Popover
               id={id}
               open={open}
@@ -77,7 +84,7 @@ tingyuliu0920"
                 },
               }}
             >
-              <Typography sx={{ p: 2 }}>Email copyed.</Typography>
+              <Typography sx={{ p: 2 }}>Email copyed!</Typography>
             </Popover>
           </div>
         </div>

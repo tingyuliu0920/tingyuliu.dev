@@ -49,10 +49,10 @@ const More = () => {
           </p>
         ))}
       </section>
-      <div className="mb-[30px]">
+      <section className="mb-[30px]">
         <Title>My Favourite Movies</Title>
         <Cards movies={movies} />
-      </div>
+      </section>
       <section className="mb-[30px]">
         <h5 className="text-2xl leading-loose text-green">
           <a

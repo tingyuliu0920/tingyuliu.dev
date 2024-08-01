@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useTheme } from "./ThemeContext";
 
 interface Movie {
+  id: number;
   name: string;
   picture: string;
   line: string;
@@ -16,36 +17,37 @@ interface CardsProps {
 }
 const Cards = ({ movies }: CardsProps) => {
   const { darkMode } = useTheme();
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [cards, setCards] = useState(movies);
 
-  const handleCardClick = () => {
-    setActiveIndex((prevIndex) => (prevIndex + 1) % movies.length);
+  const handleCardClick = (index: number) => {
+    if (index === 0) index = 1;
+    const updatedCards = [...cards];
+    const rotatedCards = updatedCards.splice(0, index);
+    setCards([...updatedCards, ...rotatedCards]);
   };
+  const getRotation = (index: number) => {
+    return index % 2 === 0 ? -5 : 5;
+  };
+
   return (
     <div className="sm: relative mx-[10px] mt-5 flex h-[400px] items-center justify-center sm:mt-0 sm:h-[500px] sm:justify-start">
-      {movies.map((movie, index) => (
+      {cards.map((movie, index) => (
         <Card
-          key={index}
-          className={`absolute max-h-[400px] max-w-[80%] transform transition-transform sm:max-h-[500px] sm:max-w-[350px]`}
+          key={movie.id}
+          onClick={() => handleCardClick(index)}
+          className={`max-h-[400px] max-w-[80%] sm:max-h-[500px] sm:max-w-[350px]`}
           sx={{
             backgroundColor: darkMode ? "rgb(51 65 85)" : "#fff",
             transformOrigin: "center",
-            marginLeft: {
-              xs: `${index % 2 === 0 ? 20 : -20}px`,
-              sm: `${index * 30}px`,
-            },
-            transform: {
-              xs: `rotate(${index % 2 === 0 ? index * 2 : index * -2}deg)`,
-              sm: "rotate(0deg)",
-            },
-            zIndex:
-              index === activeIndex ? movies.length : movies.length - index,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
+            position: "absolute",
+            left: 0,
+            right: 0,
+            margin: "0 auto",
+            transform: `rotate(${getRotation(Number(movie.id))}deg) translateY(${index * 5}px)`,
+            transition: "transform 0.3s ease",
+            zIndex: cards.length - index,
             boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
           }}
-          onClick={handleCardClick}
         >
           <CardActionArea>
             <CardMedia

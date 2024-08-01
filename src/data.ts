@@ -23,8 +23,8 @@ const experienceList = [
     location: "suzhou,China",
     logo: "aispeech.png",
     responsibilities: [
-      "Led the development of subway applications and a sound detection system.",
-      "Managed frontend engineers and participated in departmental technical seminars.",
+      "Led the development of subway applications.",
+      "Managed frontend engineers.",
     ],
   },
   {
@@ -36,7 +36,7 @@ const experienceList = [
     location: "suzhou,China",
     logo: "zhongyan.png",
     responsibilities: [
-      "Led the development of an enterprise exam system and an online exam application.",
+      "Led the development of an enterprise exam system.",
       "Managed frontend interns and conducted technical sharing sessions.",
     ],
   },
@@ -49,14 +49,14 @@ const experienceList = [
     location: "suzhou,China",
     logo: "yunxuetang.png",
     responsibilities: [
-      "Led the development of the Mentorship project for the enterprise learning platform.",
+      "Led the development of the Mentorship projects.",
       "Separated sub-projects from the main project.",
       "Organized code reviews.",
     ],
   },
   {
     position: "Frontend Developer",
-    company: "Deyun",
+    company: "Deyun Tech",
     companyUrl: "",
     startTime: "Mar 2016",
     endTime: "Sep 2017",
@@ -77,26 +77,31 @@ const projects = [
 ];
 const movies = [
   {
+    id: 0,
     name: "Fire of Love",
     picture: loveOfFire,
     line: "You fall hard for what you know, harder for what you don't.",
   },
   {
+    id: 1,
     name: "Dead Poets Society",
     picture: deadpoets,
     line: "And medicine, law, business, engineering, these are noble pursuits, and necessary to sustain life.But poetry, beauty, romance, love these are what we stay live for.",
   },
   {
+    id: 2,
     name: "海街日记",
     picture: haijieriji,
     line: "在人群里划一艘船，晕倒在柔软的云里，说无关紧要的事。",
   },
   {
+    id: 3,
     name: "宇宙探索编辑部",
     picture: yuzhou,
     line: "生命没有意义，生命的存在本身就是意义。",
   },
   {
+    id: 4,
     name: "Harry Potter",
     picture: harrypotter,
     line: "It's not our abilities that show what we truly are.It is our choices.",
@@ -109,4 +114,5 @@ const articles = [
     url: "https://mp.weixin.qq.com/s/ofTvY7u6QsbDflQoCoXBhg",
   },
 ];
+
 export { skills, projects, experienceList, movies, articles };

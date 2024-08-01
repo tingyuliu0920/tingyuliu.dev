@@ -49,40 +49,35 @@ const Experience = () => {
                 ></TimelineDot>
                 <TimelineConnector />
               </TimelineSeparator>
-              <TimelineContent sx={{ py: "12px" }}>
-                <section className="text-center">
-                  <p className="sm:text-xl">
-                    {experience.companyUrl ? (
-                      <a
-                        href={experience.companyUrl}
-                        target="_blank"
-                        className="text-green hover:underline"
-                        rel="noopener noreferrer"
-                      >
-                        {experience.company}
-                      </a>
-                    ) : (
-                      <>{experience.company}</>
-                    )}
-                  </p>
-                  <h6 className="mb-[10px] text-slate-700 sm:text-xl dark:text-slate-300">
-                    {experience.position}
-                  </h6>
-                  {experience.logo && (
+
+              <TimelineContent sx={{ py: "12px", px: "24px" }}>
+                {experience.companyUrl && experience.logo ? (
+                  <a
+                    href={experience.companyUrl}
+                    target="_blank"
+                    className="text-green hover:underline"
+                    rel="noopener noreferrer"
+                  >
                     <img
                       src={getImageURL(`companys/${experience.logo}`)}
                       alt=""
-                      className="mb-[10px] inline-block w-[100px] sm:w-[150px]"
+                      className="mb-[10px] inline-block w-[80px] transform transition-transform duration-300 ease-in-out hover:scale-110 sm:w-[110px]"
                     />
-                  )}
-                  <ul className="text-left">
-                    {experience.responsibilities.map(
-                      (responsibility, index) => (
-                        <li key={index}>- {responsibility}</li>
-                      ),
-                    )}
-                  </ul>
-                </section>
+                  </a>
+                ) : (
+                  <span className="text-lg italic text-slate-800 dark:text-slate-400">
+                    {experience.company}
+                  </span>
+                )}
+                <h6 className="mb-[4px] text-slate-700 sm:text-lg dark:text-slate-300">
+                  {experience.position}
+                </h6>
+                <ul className="text-left">
+                  {experience.responsibilities.map((responsibility, index) => (
+                    <li key={index}>- {responsibility}</li>
+                  ))}
+                </ul>
+                <div>{}</div>
               </TimelineContent>
             </TimelineItem>
           ))}

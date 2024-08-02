@@ -54,6 +54,31 @@ const More = () => {
         <Cards movies={movies} />
       </section>
       <section className="mb-[30px]">
+        <Title>What i'm doing now</Title>
+        <ul className="text-gray-700 dark:text-gray-300">
+          <li className="mb-3 leading-8">
+            <span className="text-xl"> 👩🏻‍💻 </span> Working on a personal project
+            named&nbsp;
+            <a
+              href="https://blog.tingyuliu.dev/2024/08/02/aboutrecorditem/"
+              target="_blank"
+              rel="introduction"
+              className="italic text-green underline"
+            >
+              RecordItem
+            </a>
+            .
+          </li>
+          <li className="mb-3 leading-8">
+            <span className="text-xl"> 🏋🏻‍♀️ </span> Continue with 15 minutes of
+            daily exercise.
+          </li>
+          <li className="mb-3 leading-8">
+            <span className="text-xl"> 🌆 </span> Enjoy the sunset every day.
+          </li>
+        </ul>
+      </section>
+      <section className="mb-[30px]">
         <h5 className="text-2xl font-bold leading-loose text-green hover:underline">
           <a
             href="http://blog.tingyuliu.dev"
@@ -68,21 +93,6 @@ const More = () => {
           I keep some of my coding ideas here.
         </p>
       </section>
-      {/* <section className="mb-[30px]">
-        <Title>What i'm doing now</Title>
-        <ul className="text-gray-700 dark:text-gray-300">
-          <li className="leading-8">
-            - Learn some new things and work on personal projects.
-          </li>
-          <li className="leading-8">
-            - Continue with 15 minutes of exercise daily.
-          </li>
-          <li className="leading-8">
-            - Stuck on the first round of Assassin's Ezio...
-          </li>
-        </ul>
-      </section> */}
-
       <p className="mt-[30px] text-green">To be continued...</p>
     </div>
   );

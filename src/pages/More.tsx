@@ -54,7 +54,32 @@ const More = () => {
         <Cards movies={movies} />
       </section>
       <section className="mb-[30px]">
-        <h5 className="text-2xl leading-loose text-green">
+        <Title>What i'm doing now</Title>
+        <ul className="text-gray-700 dark:text-gray-300">
+          <li className="mb-3 leading-8">
+            <span className="text-xl"> 👩🏻‍💻 </span> Working on a personal project
+            named&nbsp;
+            <a
+              href="https://blog.tingyuliu.dev/2024/08/02/aboutrecorditem/"
+              target="_blank"
+              rel="introduction"
+              className="italic text-green underline"
+            >
+              RecordItem
+            </a>
+            .
+          </li>
+          <li className="mb-3 leading-8">
+            <span className="text-xl"> 🏋🏻‍♀️ </span> Continue with 15 minutes of
+            daily exercise.
+          </li>
+          <li className="mb-3 leading-8">
+            <span className="text-xl"> 🌆 </span> Enjoy the sunset every day.
+          </li>
+        </ul>
+      </section>
+      <section className="mb-[30px]">
+        <h5 className="text-2xl font-bold leading-loose text-green hover:underline">
           <a
             href="http://blog.tingyuliu.dev"
             target="_blank"

@@ -19,70 +19,71 @@ const Experience = () => {
   return (
     <div className="animate-fadeIn px-[10px]">
       <Title>Experience</Title>
-      <div className="flex justify-center">
-        <Timeline
-          sx={{
-            maxWidth: "100%",
-            [`& .${timelineOppositeContentClasses.root}`]: {
-              display: "flex",
-              justifyContent: matches ? "start" : "end",
-              flex: matches ? "initial" : "0.3",
-              width: matches ? "88px" : "auto",
-              padding: matches ? "6px 4px" : "6x 10px",
-            },
-          }}
-        >
-          {experienceList.map((experience) => (
-            <TimelineItem key={experience.company}>
-              <TimelineOppositeContent align="right">
-                <div className="items-right flex flex-col justify-center text-base text-gray-700 dark:text-gray-400">
-                  <span>{experience.endTime} </span>-{" "}
-                  <span>{experience.startTime}</span>
-                </div>
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <TimelineConnector />
-                <TimelineDot
-                  sx={{
-                    background: "#7fc06e",
-                  }}
-                ></TimelineDot>
-                <TimelineConnector />
-              </TimelineSeparator>
+      <Timeline
+        sx={{
+          maxWidth: "100%",
+          [`& .${timelineOppositeContentClasses.root}`]: {
+            display: "flex",
+            justifyContent: matches ? "start" : "end",
+            // flex: matches ? "initial" : "0.3",
+            flex: "initial",
+            width: matches ? "88px" : "auto",
+            padding: matches ? "6px 4px" : "6x 10px",
+          },
+          padding: "10px 0",
+          marginTop: "10px",
+        }}
+      >
+        {experienceList.map((experience) => (
+          <TimelineItem key={experience.company}>
+            <TimelineOppositeContent align="right">
+              <div className="items-right flex w-[80px] flex-col justify-center text-base text-gray-700 dark:text-gray-400">
+                <span>{experience.endTime} </span>-{" "}
+                <span>{experience.startTime}</span>
+              </div>
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineConnector />
+              <TimelineDot
+                sx={{
+                  background: "#7fc06e",
+                }}
+              ></TimelineDot>
+              <TimelineConnector />
+            </TimelineSeparator>
 
-              <TimelineContent sx={{ py: "12px", px: "24px" }}>
-                {experience.companyUrl && experience.logo ? (
-                  <a
-                    href={experience.companyUrl}
-                    target="_blank"
-                    className="text-green hover:underline"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src={getImageURL(`companys/${experience.logo}`)}
-                      alt=""
-                      className="mb-[10px] inline-block w-[80px] transform transition-transform duration-300 ease-in-out hover:scale-110 sm:w-[110px]"
-                    />
-                  </a>
-                ) : (
-                  <span className="text-lg italic text-slate-800 dark:text-slate-400">
-                    {experience.company}
-                  </span>
-                )}
-                <h6 className="mb-[4px] text-slate-700 sm:text-lg dark:text-slate-300">
-                  {experience.position}
-                </h6>
-                <ul className="text-left">
-                  {experience.responsibilities.map((responsibility, index) => (
-                    <li key={index}>- {responsibility}</li>
-                  ))}
-                </ul>
-                <div>{}</div>
-              </TimelineContent>
-            </TimelineItem>
-          ))}
-        </Timeline>
-      </div>
+            <TimelineContent sx={{ py: "12px", px: "24px" }}>
+              {experience.companyUrl && experience.logo ? (
+                <a
+                  href={experience.companyUrl}
+                  target="_blank"
+                  className="text-green hover:underline"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={getImageURL(`companys/${experience.logo}`)}
+                    alt=""
+                    className="mb-[10px] inline-block w-[80px] transform transition-transform duration-300 ease-in-out hover:scale-110 sm:w-[110px]"
+                  />
+                </a>
+              ) : (
+                <span className="text-lg italic text-slate-800 dark:text-slate-400">
+                  {experience.company}
+                </span>
+              )}
+              <h6 className="mb-[4px] text-green sm:text-lg">
+                {experience.position}
+              </h6>
+              <ul className="text-slate-700 dark:text-gray-300">
+                {experience.responsibilities.map((responsibility, index) => (
+                  <li key={index}>- {responsibility}</li>
+                ))}
+              </ul>
+              <div>{}</div>
+            </TimelineContent>
+          </TimelineItem>
+        ))}
+      </Timeline>
     </div>
   );
 };

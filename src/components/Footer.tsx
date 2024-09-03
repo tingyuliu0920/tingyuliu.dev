@@ -1,5 +1,5 @@
 import { getImageURL } from "../utils/imageUtil";
-import { useTheme } from "./ThemeContext";
+import { useTheme } from "./themeContext/ThemeContext";
 
 const Footer = () => {
   const { darkMode } = useTheme();

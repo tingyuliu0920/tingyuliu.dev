@@ -1,6 +1,6 @@
 import { CircularProgress, Modal } from "@mui/material";
 import { useState } from "react";
-import { getImageURL } from "../utils/imageUtil";
+import { getImageURL } from "../../utils/imageUtil";
 
 interface ImageModalProps {
   imgSrc: string;
@@ -36,6 +36,7 @@ const ImageModal = ({ imgSrc, open, handleClose }: ImageModalProps) => {
       <div
         className="relative flex items-center justify-center focus-visible:outline-none"
         onClick={handleModalClose}
+        role="dialog"
       >
         {imgLoading && <CircularProgress className="absolute z-10" />}
         {image && (

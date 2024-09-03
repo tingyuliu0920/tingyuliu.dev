@@ -22,13 +22,17 @@ export const useTheme = (): ThemeContextType => {
   return context;
 };
 
-type ThemeProviderProps = {
+export const ThemeProvider = ({
+  children,
+  initialThemeState,
+}: {
   children: ReactNode;
-};
-
-export const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  const [darkMode, setDarkMode] = useState(
-    window.localStorage.getItem("darkMode")?.toLowerCase() === "true" || false,
+  initialThemeState?: boolean;
+}) => {
+  const [darkMode, setDarkMode] = useState<boolean>(
+    initialThemeState ??
+      (window.localStorage.getItem("darkMode")?.toLowerCase() === "true" ||
+        false),
   );
 
   const toggleDarkMode = useCallback(() => {

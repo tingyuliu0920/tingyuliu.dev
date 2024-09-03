@@ -2,7 +2,7 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import ImageModal from "../components/ImageModal";
+import ImageModal from "../components/imageModal/ImageModal";
 
 const importAllImages = async (): Promise<Record<string, string>> => {
   try {

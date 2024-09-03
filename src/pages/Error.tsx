@@ -1,4 +1,4 @@
-import { useTheme } from "../components/ThemeContext";
+import { useTheme } from "../components/themeContext/ThemeContext";
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
 

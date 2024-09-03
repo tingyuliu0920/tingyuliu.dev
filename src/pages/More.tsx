@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Cards from "../components/Cards";
+import Cards from "../components/cards/Cards";
 import { articles, movies } from "../data";
 import { Helmet } from "react-helmet";
 import { AiOutlineLink } from "react-icons/ai";

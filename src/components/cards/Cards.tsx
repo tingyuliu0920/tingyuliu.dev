@@ -3,8 +3,8 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
-import { useState } from "react";
-import { useTheme } from "./ThemeContext";
+import { useCallback, useState } from "react";
+import { useTheme } from "../themeContext/ThemeContext";
 
 interface Movie {
   id: number;
@@ -17,17 +17,20 @@ interface CardsProps {
 }
 const Cards = ({ movies }: CardsProps) => {
   const { darkMode } = useTheme();
-  const [cards, setCards] = useState(movies);
+  const [cards, setCards] = useState<Movie[]>(movies);
 
-  const handleCardClick = (index: number) => {
-    if (index === 0) index = 1;
-    const updatedCards = [...cards];
-    const rotatedCards = updatedCards.splice(0, index);
-    setCards([...updatedCards, ...rotatedCards]);
-  };
-  const getRotation = (index: number) => {
+  const handleCardClick = useCallback(
+    (index: number) => {
+      if (index === 0) index = 1;
+      const updatedCards = [...cards];
+      const rotatedCards = updatedCards.splice(0, index);
+      setCards([...updatedCards, ...rotatedCards]);
+    },
+    [cards],
+  );
+  const getRotation = useCallback((index: number) => {
     return index % 2 === 0 ? -5 : 5;
-  };
+  }, []);
 
   return (
     <div className="sm: relative mx-[10px] mt-5 flex h-[400px] items-center justify-center sm:mt-0 sm:h-[500px] sm:justify-start">
